@@ -19,4 +19,12 @@ function somarDivisores() {
             "Digite um valor maior que 0";
     }
 }
+var input = document.getElementById("valor");
+
+input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("btnCalcular").click(somarDivisores());
+    }
+});
 //console.log(somaDivisiveis(10));
